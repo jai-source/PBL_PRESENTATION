@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Percepta | PCI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="nav" aria-label="Primary">
+  <div class="nav__inner">
+    <h2 class="nav__brand">Percepta</h2>
+
+    <button class="nav__toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+      <span class="nav__toggleLines" aria-hidden="true"></span>
+    </button>
+
+    <ul class="nav__links" id="nav-links">
+      <li><a href="#problem">Problem</a></li>
+      <li><a href="#solution">Solution</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#math">Math</a></li>
+      <li><a href="#constants">Constants</a></li>
+      <li><a href="#future">Future</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero__inner">
+    <h1>Percepta</h1>
+    <p>Implementation of a Perceptual Computing Interface (PCI)</p>
+    <span>Jai Ratna | Manipal University Jaipur</span>
+  </div>
+</header>
+
+<main>
+
+<section id="problem" class="section reveal">
+  <h2>Problem Statement</h2>
+  <p>Traditional computer interaction relies on mouse & keyboard, limiting accessibility and hands-free computing.</p>
+  <div class="card">
+    Need: A perceptual interface that converts facial movements into digital control actions.
+  </div>
+</section>
+
+<section id="solution" class="section reveal">
+  <h2>Proposed Solution</h2>
+  <ul>
+    <li>Head movement → Cursor control</li>
+    <li>Eyebrow raise → Click</li>
+    <li>Mathematical modeling → Stability</li>
+    <li>Tunable interaction constants</li>
+  </ul>
+</section>
+
+<section id="features" class="section reveal">
+  <h2>Current Features</h2>
+  <div class="grid">
+    <div class="card">Head-controlled cursor movement</div>
+    <div class="card"> Eyebrow raise click</div>
+    <div class="card"> Dead-zone filtering</div>
+    <div class="card"> Moving average smoothing</div>
+    <div class="card"> Exponential smoothing</div>
+    <div class="card"> Multi-constant control system</div>
+    <div class="card"> Stable landmark detection</div>
+    <div class="card"> Adjustable sensitivity</div>
+  </div>
+</section>
+
+<section id="math" class="section reveal">
+  <h2>Mathematical Model</h2>
+  <div class="math-box">
+    Head Movement Model:<br/>
+    Δx = x(t) − x(t−1)<br/>
+    Δy = y(t) − y(t−1)<br/><br/>
+
+    Cursor Movement:<br/>
+    Cursor_X = Current_X + k_head × Δx<br/>
+    Cursor_Y = Current_Y + k_head × Δy<br/><br/>
+
+    Eyebrow Click Model:<br/>
+    Distance = Eye_Y − Eyebrow_Y<br/>
+    If Distance &gt; Threshold → Click<br/><br/>
+
+    All interaction is controlled using tunable constants.
+  </div>
+</section>
+
+<section id="constants" class="section reveal">
+  <h2>Important Constants</h2>
+  <div class="grid">
+    <div class="card">K_HEAD</div>
+    <div class="card">EYEBROW_THRESHOLD</div>
+    <div class="card">CLICK_COOLDOWN</div>
+    <div class="card">DEAD_ZONE</div>
+    <div class="card">SMOOTH_WINDOW</div>
+  </div>
+</section>
+
+<section id="future" class="section reveal">
+  <h2>Future Vision</h2>
+  <p>Multi-modal perceptual interface with eye gaze, voice, gestures, and facial expressions.</p>
+  <ul>
+    <li>Eye gaze tracking for cursor &amp; selection</li>
+    <li>Head tilt and nod for scrolling &amp; click</li>
+    <li>Hand gesture navigation (swipe, zoom)</li>
+    <li>Mouth-based drag control</li>
+    <li>Facial expression-based commands</li>
+    <li>Voice + facial hybrid interaction</li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  <h2>Thank You</h2>
+  <div class="card footer-card">Under the Guidance of Dr. Gireesh Kumar</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
