@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Percepta | PCI</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+<nav class="nav">
+  <div class="nav__inner">
+    <h2 class="nav__brand">Percepta</h2>
+    <ul class="nav__links">
+      <li><a href="#problem">Problem</a></li>
+      <li><a href="#literature">Literature</a></li>
+      <li><a href="#solution">Solution</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#math">Math</a></li>
+      <li><a href="#constants">Constants</a></li>
+      <li><a href="#future">Future</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <h1>Percepta</h1>
+  <p>Implementation of a Perceptual Computing Interface (PCI)</p>
+  <span>Jai Ratna | 2427030819</span>
+  <div class="card">Guided by Dr. Gireesh Kumar</div>
+</header>
+
+<main>
+
+<!-- Problem -->
+<section id="problem" class="section">
+  <h2>Problem Statement</h2>
+  <p>Traditional computer interaction relies on mouse & keyboard, limiting accessibility and hands-free computing.</p>
+  <div class="card">
+    Need: A perceptual interface that converts facial movements into digital control actions.
+  </div>
+</section>
+
+<!-- Literature -->
+<section id="literature" class="section">
+  <h2>Literature Review</h2>
+
+  <div class="grid literature-grid">
+
+    <a href="https://ieeexplore.ieee.org/document/1033767" target="_blank" class="lit-card">
+      <div class="lit-tag">IEEE • 2002</div>
+      <h3>Camera Mouse</h3>
+      <p>Head-based cursor control system.</p>
+      <span class="lit-issue">Limitation: Fixed mapping, no tuning</span>
+      <div class="lit-footer">Click to view paper →</div>
+    </a>
+
+    <a href="https://arxiv.org/abs/1907.06724" target="_blank" class="lit-card">
+      <div class="lit-tag">Google • 2020</div>
+      <h3>MediaPipe Face Mesh</h3>
+      <p>Real-time facial landmark detection.</p>
+      <span class="lit-issue">Limitation: No interaction model</span>
+      <div class="lit-footer">Click to view paper →</div>
+    </a>
+
+    <a href="https://www.researchgate.net/publication/361677591" target="_blank" class="lit-card">
+      <div class="lit-tag">IEEE • 2022</div>
+      <h3>Head Gesture Systems</h3>
+      <p>Cursor control using head pose.</p>
+      <span class="lit-issue">Limitation: Heuristic mapping</span>
+      <div class="lit-footer">Click to view paper →</div>
+    </a>
+
+    <a href="https://www.researchgate.net/publication/378167018" target="_blank" class="lit-card">
+      <div class="lit-tag">AI • 2024</div>
+      <h3>Gesture Interfaces</h3>
+      <p>Gesture-based interaction systems.</p>
+      <span class="lit-issue">Limitation: Discrete control only</span>
+      <div class="lit-footer">Click to view paper →</div>
+    </a>
+
+  </div>
+
+  <div class="card research-gap">
+    <strong>Research Gap:</strong><br/>
+    Existing systems lack explicit, tunable, and user-adaptive mapping between perception and control.
+  </div>
+</section>
+<!-- Solution -->
+<section id="solution" class="section">
+  <h2>Proposed Solution</h2>
+  <ul>
+    <li>Head movement → Cursor control</li>
+    <li>Eyebrow raise → Click</li>
+    <li>Mathematical modeling → Stability</li>
+    <li>Tunable interaction constants</li>
+  </ul>
+</section>
+
+<!-- Features -->
+<section id="features" class="section">
+  <h2>Current Features</h2>
+  <div class="grid">
+    <div class="card">Head-controlled cursor</div>
+    <div class="card">Eyebrow click</div>
+    <div class="card">Dead-zone filtering</div>
+    <div class="card">Moving average</div>
+    <div class="card">Exponential smoothing</div>
+    <div class="card">Multi-constant control</div>
+    <div class="card">Stable tracking</div>
+    <div class="card">Adjustable sensitivity</div>
+  </div>
+</section>
+
+<!-- Math -->
+<section id="math" class="section">
+  <h2>Mathematical Model</h2>
+  <div class="card">
+
+    <strong>Head Movement:</strong><br/>
+    Δx = x(t) − x(t−1)<br/>
+    Δy = y(t) − y(t−1)<br/><br/>
+
+    <strong>Dead Zone:</strong><br/>
+    If |Δx| &lt; D → 0<br/><br/>
+
+    <strong>Smoothing:</strong><br/>
+    S = α·Δ + (1−α)·S(prev)<br/><br/>
+
+    <strong>Cursor Mapping:</strong><br/>
+    Cursor = Current + k × S<br/><br/>
+
+    <strong>Click Model:</strong><br/>
+    Distance = Eye_Y − Eyebrow_Y<br/>
+    If Distance &gt; Threshold → Click
+
+  </div>
+</section>
+
+<!-- Constants -->
+<section id="constants" class="section">
+  <h2>Important Constants</h2>
+  <div class="grid">
+    <div class="card">K_HEAD<br/>Sensitivity</div>
+    <div class="card">DEAD_ZONE<br/>Noise filter</div>
+    <div class="card">ALPHA<br/>Smoothing control</div>
+    <div class="card">SMOOTH_WINDOW<br/>Averaging</div>
+    <div class="card">EYEBROW_THRESHOLD<br/>Click trigger</div>
+    <div class="card">CLICK_COOLDOWN<br/>Delay</div>
+  </div>
+</section>
+
+<!-- Future -->
+<section id="future" class="section">
+  <h2>Future Vision</h2>
+
+  <ul>
+    <li>Eye gaze tracking</li>
+    <li>Head tilt & nod control</li>
+    <li>Hand gesture navigation</li>
+    <li>Mouth-based commands</li>
+    <li>Facial expression control</li>
+    <li>Voice + face interaction</li>
+  </ul>
+
+  <div class="card">
+    <strong>Long-Term Vision:</strong><br/>
+    PCI API for developers<br/>
+    AI-based adaptive system<br/>
+    Universal hands-free computing
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <h2>Thank You</h2>
+  
+</footer>
+
+</body>
+</html>
